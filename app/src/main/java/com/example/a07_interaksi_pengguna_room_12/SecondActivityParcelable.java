@@ -24,11 +24,11 @@ public class SecondActivityParcelable extends AppCompatActivity {
         Intent intent = getIntent();
         DataMahasiswaParcelable mhs = intent.getParcelableExtra("DataMahasiswaParcelable");
 
-        textViewNama.setText("Nama:" + mhs.getNama());
-        textViewNim.setText("NIM:" + mhs.getNim());
-        textViewTanggalLahir.setText("Tanggal lahir:" + mhs.getTanggalLahir());
-        textViewJenisKelamin.setText("Jenis Kelamin:" + mhs.getJenisKelamin());
-        textViewJurusan.setText("Jurusan:" + mhs.getJurusan());
+        textViewNama.setText( mhs.getNama());
+        textViewNim.setText(mhs.getNim());
+        textViewTanggalLahir.setText(mhs.getTanggalLahir());
+        textViewJenisKelamin.setText (mhs.getJenisKelamin());
+        textViewJurusan.setText(mhs.getJurusan());
 
 
     }

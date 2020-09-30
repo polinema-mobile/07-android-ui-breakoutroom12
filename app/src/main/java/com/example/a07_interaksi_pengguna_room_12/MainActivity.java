@@ -16,13 +16,14 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView TanggalLahir;
     Calendar calendar;
     DatePickerDialog datePickerDialog;
 
     Button btnSubmit;
+    Button btnSubmit2;
     EditText mhsNama,mhsNim;
     RadioButton radioButton;
     RadioGroup radioGroup;
@@ -35,11 +36,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        btnSubmit=findViewById(R.id.btnSubmit);
+        btnSubmit=(Button)findViewById(R.id.btnSubmit);
         mhsNama = (EditText) findViewById(R.id.edtNama);
         mhsNim = (EditText) findViewById(R.id.edtNim);
         spinJurusan = (Spinner) findViewById(R.id.spinnerJurusan);
-
         TanggalLahir = (TextView)findViewById(R.id.TanggalLahir);
 
         TanggalLahir.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 int selectedId = radioGroup.getCheckedRadioButtonId();
@@ -73,5 +74,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+//        =================================== intent=======================================
+        btnSubmit2=(Button)findViewById(R.id.btnSubmit2);
+        btnSubmit2.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        RadioButton radioButton;
+        radioButton = (RadioButton) findViewById(selectedId);
+        switch (view.getId()){
+            case R.id.btnSubmit2:
+                Intent sendData = new Intent(MainActivity.this,MainActivity2Intent.class);
+                sendData.putExtra("data1", mhsNama.getText().toString());
+                sendData.putExtra("data2", mhsNim.getText().toString());
+                sendData.putExtra("data3",TanggalLahir.getText().toString());
+                sendData.putExtra("data4",radioButton.getText().toString());
+                sendData.putExtra("data5", spinJurusan.getSelectedItem().toString());
+
+                startActivity(sendData);
+                break;
+        }
     }
 }
