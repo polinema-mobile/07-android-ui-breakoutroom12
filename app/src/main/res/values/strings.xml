@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">07_interaksi_pengguna_room_12</string>
+
     <string-array name="android_dropdown_arrays">
         <item>Teknologi Informasi</item>
         <item>Teknologi Mesin</item>
@@ -9,7 +10,41 @@
         <item>Akuntansi</item>
         <item>Administrasi Niaga</item>
         <item>Bahasa Inggris</item>
+
     </string-array>
+
+    <string-array name="fakultas">
+        <item>Fakultas Psikologi</item>
+        <item>Fakultas Sastra</item>
+        <item>Fakultas Agama</item>
+        <item>Fakultas Teknik</item>
+        <item>Fakultas Kedokteran</item>
+        <item>Fakultas Ekonomi</item>
+        <item>Fakultas Hukum</item>
+        <item>Fakultas Sosiologi</item>
+    </string-array>
+
+    <string-array name="programstudi">
+        <item>S1</item>
+        <item>D4</item>
+        <item>D3</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Baru</item>
+        <item>Pindahan</item>
+        <item>Pindahan dari fakultas</item>
+    </string-array>
+
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Katolik</item>
+        <item>Hindu</item>
+        <item>Buddha</item>
+        <item>Konghuchu</item>
+    </string-array>
+
     <string name="title_activity_second_parcelable">SecondActivityParcelable</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

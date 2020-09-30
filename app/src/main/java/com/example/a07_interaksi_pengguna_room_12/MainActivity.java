@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RadioGroup radioGroup;
     Spinner spinJurusan;
 
+    Button button2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mhsNim = (EditText) findViewById(R.id.edtNim);
         spinJurusan = (Spinner) findViewById(R.id.spinnerJurusan);
         TanggalLahir = (TextView)findViewById(R.id.TanggalLahir);
+
+        button2=(Button)findViewById(R.id.button2);
+        button2.setOnClickListener(this);
 
         TanggalLahir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +101,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 sendData.putExtra("data5", spinJurusan.getSelectedItem().toString());
 
                 startActivity(sendData);
-                break;
+
+
+
+            case R.id.button2:
+                Intent intent = new Intent(MainActivity.this, DataPribadi.class);
+                startActivity(intent);
         }
     }
+
+
+
 }

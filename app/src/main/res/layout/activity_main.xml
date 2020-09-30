@@ -26,8 +26,8 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:hint="Nama Mahasiswa"
+                android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -42,8 +42,8 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:ems="10"
-                android:inputType="numberSigned"
                 android:hint="Nomor Induk Mahasiswa"
+                android:inputType="numberSigned"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtNama" />
@@ -93,7 +93,6 @@
 
             <Spinner
                 android:id="@+id/spinnerJurusan"
-                android:hint="Jurusan"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
@@ -102,6 +101,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:entries="@array/android_dropdown_arrays"
+                android:hint="Jurusan"
                 android:longClickable="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -137,6 +137,19 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="297dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="100dp"
+                android:text="Form Pendaftaran"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSubmit2"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
