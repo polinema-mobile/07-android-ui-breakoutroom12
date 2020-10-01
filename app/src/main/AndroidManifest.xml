@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataPribadi"></activity>
+        <activity android:name=".DataPribadiParcelableActivity"></activity>
+        <activity android:name=".DataPribadi" />
         <activity android:name=".MainActivity2Intent" />
         <activity android:name=".SecondActivityParcelable" />
         <activity android:name=".MainActivity">

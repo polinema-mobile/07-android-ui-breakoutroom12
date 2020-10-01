@@ -13,7 +13,7 @@ public class SecondActivityParcelable extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_activuty_parcelable);
+        setContentView(R.layout.activity_second_activity_parcelable);
 
         textViewNama = (TextView) findViewById(R.id.textViewNama);
         textViewNim = (TextView) findViewById(R.id.textViewNim);
