@@ -10,7 +10,7 @@ public class DataPribadiParcelableActivity extends AppCompatActivity {
 
     private TextView textView6, textView7, textView5, textView8, textView9, textView10, textView11, textView12, textView13;
     private  TextView textView14, textView15, textView16, textView17, textView18, textView19, textView20, textView21, textView22;
-    private  TextView textView23, textView24;
+    private  TextView textView23, textView24, textView25;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class DataPribadiParcelableActivity extends AppCompatActivity {
         textView22 = (TextView)findViewById(R.id.textView22);
         textView23 = (TextView)findViewById(R.id.textView23);
         textView24 = (TextView)findViewById(R.id.textView24);
+        textView25 = (TextView)findViewById(R.id.textView25);
 
         Intent intent = getIntent();
         DataPribadiParcelable dataPribadi = intent.getParcelableExtra("DataPribadiParcelable");
@@ -61,5 +62,6 @@ public class DataPribadiParcelableActivity extends AppCompatActivity {
         textView22.setText("No HP: " + dataPribadi.getNoHp());
         textView23.setText("No Telp: " + dataPribadi.getNoTelp());
         textView24.setText("Email: " + dataPribadi.getEmail());
+        textView25.setText("Tanggal Lahir: " + dataPribadi.getTanggallahir());
     }
 }

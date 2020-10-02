@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class DataPribadiParcelable implements Parcelable {
 
-    private String nama, fakultas, prodi, statusPendaftaran, alasan, nik, prestasi, tempatLahir, jenisKelamin, kewarganegaraan;
+    private String nama, fakultas, prodi, statusPendaftaran, alasan, nik, prestasi, tempatLahir,tanggallahir, jenisKelamin, kewarganegaraan;
     private String agama, alamat, rt, rw, kodePos, provinsi, kota, noHp, noTelp, email;
 
     public String getNama(){return nama;}
@@ -16,6 +16,7 @@ public class DataPribadiParcelable implements Parcelable {
     public String getNik(){return nik;}
     public String getPrestasi(){return prestasi;}
     public String getTempatLahir(){return tempatLahir;}
+    public String getTanggallahir(){return tanggallahir;}
     public String getJenisKelamin(){return jenisKelamin;}
     public String getKewarganegaraan(){return kewarganegaraan;}
     public String getAgama(){return agama;}
@@ -31,7 +32,7 @@ public class DataPribadiParcelable implements Parcelable {
 
 
     public DataPribadiParcelable(String nama, String fakultas, String prodi, String statusPendaftaran,
-    String alasan, String nik, String prestasi, String tempatLahir, String jenisKelamin, String kewarganegaraan, String agama,
+    String alasan, String nik, String prestasi, String tempatLahir,String tanggallahir, String jenisKelamin, String kewarganegaraan, String agama,
     String alamat, String rt, String rw, String kodePos, String provinsi, String kota, String noHp, String noTelp, String email){
         this.nama=nama;
         this.fakultas=fakultas;
@@ -41,6 +42,7 @@ public class DataPribadiParcelable implements Parcelable {
         this.nik=nik;
         this.prestasi=prestasi;
         this.tempatLahir =tempatLahir;
+        this.tanggallahir=tanggallahir;
         this.jenisKelamin =jenisKelamin;
         this.kewarganegaraan=kewarganegaraan;
         this.agama=agama;
@@ -70,6 +72,7 @@ public class DataPribadiParcelable implements Parcelable {
         parcel.writeString((nik));
         parcel.writeString((prestasi));
         parcel.writeString((tempatLahir));
+        parcel.writeString((tanggallahir));
         parcel.writeString((jenisKelamin));
         parcel.writeString((kewarganegaraan));
         parcel.writeString((agama));
@@ -93,6 +96,7 @@ public class DataPribadiParcelable implements Parcelable {
         nik=parcel.readString();
         prestasi=parcel.readString();
         tempatLahir=parcel.readString();
+        tanggallahir=parcel.readString();
         jenisKelamin =parcel.readString();
         kewarganegaraan=parcel.readString();
         agama=parcel.readString();

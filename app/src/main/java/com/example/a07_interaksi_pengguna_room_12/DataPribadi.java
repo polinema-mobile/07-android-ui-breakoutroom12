@@ -2,14 +2,19 @@ package com.example.a07_interaksi_pengguna_room_12;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.Calendar;
 
 public class DataPribadi extends AppCompatActivity {
 
@@ -18,6 +23,9 @@ public class DataPribadi extends AppCompatActivity {
     private RadioGroup jenisKelaminRadioGroup, kewarganegaraanRadioGroup;
     private RadioButton jenisKelamin, kewarganegaraan;
     private Button selanjutnya;
+    private TextView tanggallahir;
+    Calendar calendar;
+    DatePickerDialog datePickerDialog;
 
 
     @Override
@@ -48,6 +56,26 @@ public class DataPribadi extends AppCompatActivity {
         telepon = (EditText) findViewById(R.id.edittelpon);
         email = (EditText) findViewById(R.id.editTextTextEmailAddress2);
         selanjutnya =(Button) findViewById(R.id.sbmitbutton);
+        tanggallahir=(TextView) findViewById(R.id.setdatalahir);
+
+        tanggallahir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calendar=Calendar.getInstance();
+                int hari =calendar.get(Calendar.DAY_OF_MONTH);
+                int bulan =calendar.get(Calendar.MONTH);
+                int tahun =calendar.get(Calendar.YEAR);
+
+                datePickerDialog=new DatePickerDialog(DataPribadi.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int mhari, int mbulan, int mtahun) {
+                        tanggallahir.setText(mhari+"/"+(mbulan+1)+"/"+mtahun);
+                    }
+                }, hari, bulan, tahun);
+                datePickerDialog.show();
+            }
+        });
+
 
         //test parcelable menggunakan button "selanjutnya" ke "DataPribadiParcelableActivity" activity
         selanjutnya.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +89,7 @@ public class DataPribadi extends AppCompatActivity {
 
                 DataPribadiParcelable dataPribadi = new DataPribadiParcelable(nama.getText().toString(),fakultas.getSelectedItem().toString(),
                 programStudi.getSelectedItem().toString(),statusPendaftaran.getSelectedItem().toString(),alasanMemilihProdi.getText().toString(),
-                    nik.getText().toString(), prestasi.getText().toString(),tempatLahir.getText().toString(),
+                    nik.getText().toString(), prestasi.getText().toString(),tempatLahir.getText().toString(),tanggallahir.getText().toString(),
                         jenisKelamin.getText().toString(), kewarganegaraan.getText().toString(),agama.getSelectedItem().toString(), alamat.getText().toString(),
                         rt.getText().toString(),rw.getText().toString(),kodePos.getText().toString(),provinsi.getText().toString(),kotaKab.getText().toString(),
                         noHp.getText().toString(),telepon.getText().toString(),email.getText().toString());

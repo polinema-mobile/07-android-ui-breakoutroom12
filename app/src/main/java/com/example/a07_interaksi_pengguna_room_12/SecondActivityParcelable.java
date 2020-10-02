@@ -15,7 +15,7 @@ public class SecondActivityParcelable extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_activity_parcelable);
 
-        textViewNama = (TextView) findViewById(R.id.textViewNama);
+        textViewNama = (TextView) findViewById(R.id.txtViewNama);
         textViewNim = (TextView) findViewById(R.id.textViewNim);
         textViewTanggalLahir = (TextView) findViewById(R.id.textViewTanggalLahir);
         textViewJenisKelamin = (TextView) findViewById(R.id.textViewJenisKelamin);

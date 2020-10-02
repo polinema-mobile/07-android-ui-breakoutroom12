@@ -10,7 +10,9 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="412dp"
         android:layout_height="254dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_primary"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,8 +21,10 @@
             android:id="@+id/txtViewNama"
             android:layout_width="289dp"
             android:layout_height="37dp"
+            android:layout_marginTop="18dp"
             android:layout_marginBottom="40dp"
             android:fontFamily="@font/arima_madurai"
+            android:gravity="center_horizontal"
             android:shadowColor="#000000"
             android:text="Nama: "
             android:textAlignment="center"
@@ -31,7 +35,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -39,7 +44,7 @@
             android:layout_height="119dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/textViewNama"
+            app:layout_constraintBottom_toTopOf="@+id/txtViewNama"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
